@@ -11,7 +11,7 @@
   Medusa UploadThing File Plugin
 </h1>
 <p align="center">
-v0.0.1 | <a href="https://github.com/e-hart/medusa-uploadthing-file-plugin">GitHub</a> | <a href="https://www.medusajs.com">Medusa</a> | MIT License
+v0.0.2 | <a href="https://github.com/e-hart/medusa-uploadthing-file-plugin">GitHub</a> | <a href="https://www.medusajs.com">Medusa</a> | MIT License
 <br>
 Author: <a href="https://evanh.art">Evan Hart</a>
 </p>
