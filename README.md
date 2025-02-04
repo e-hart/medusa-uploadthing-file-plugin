@@ -76,6 +76,10 @@ export default defineConfig({
 
 There are a few additional options you can configure in the provider's options:
 
+- `logLevel` sets UploadThing's log level. It defaults to "Info".
+- `apiUrl` and `ingestUrl` are optional and can be used to override the default UploadThing API and ingest URLs. This can be useful for self-hosting or testing purposes.
+- `filePrefix` is an optional string that can be used to add a prefix to the uploaded file's name.
+
 ```ts
 ...
   options: {
@@ -87,10 +91,5 @@ There are a few additional options you can configure in the provider's options:
   }
 ```
 
-`logLevel` sets UploadThing's log level. It defaults to "Info".
-
-`apiUrl` and `ingestUrl` are optional and can be used to override the default UploadThing API and ingest URLs. This can be useful for self-hosting or testing purposes.
-
-`filePrefix` is an optional string that can be used to add a prefix to the uploaded file's name.
 
 And that's it! You're ready to start using the UploadThing file provider in your Medusa application.
