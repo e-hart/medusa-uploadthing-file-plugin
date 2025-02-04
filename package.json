@@ -1,6 +1,6 @@
 {
   "name": "medusa-uploadthing-file-plugin",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Medusa UploadThing File Plugin",
   "author": "Evan Hart <evanhart@evanh.art>",
   "license": "MIT",
