@@ -11,16 +11,22 @@
   Medusa UploadThing File Plugin
 </h1>
 <p align="center">
-v0.0.2 | <a href="https://github.com/e-hart/medusa-uploadthing-file-plugin">GitHub</a> | <a href="https://www.medusajs.com">Medusa</a> | MIT License
+<a href="https://github.com/e-hart/medusa-uploadthing-file-plugin">GitHub</a> | <a href="https://www.medusajs.com">Medusa</a> | MIT License
 <br>
 Author: <a href="https://evanh.art">Evan Hart</a>
 </p>
 
-This plugin allows you to use the UploadThing file provider in your Medusa application. Under the hood, it uses UploadThing's [UTApi](https://docs.uploadthing.com/api-reference/ut-api) to upload files and retrieve presigned URLs.
+This plugin allows you to use UploadThing as a file provider in your Medusa application. Under the hood, it uses UploadThing's [UTApi](https://docs.uploadthing.com/api-reference/ut-api) SDK to upload files and retrieve presigned URLs.
+
+Private ACL requires a paid UploadThing account, and the feature must be enabled in your UploadThing app settings.
 
 ## Compatibility
 
 This plugin is compatible with versions >= 2.4.0 of `@medusajs/medusa`.
+
+## Important note
+
+This plugin is meant to be resolved within the `@medusajs/medusa/file` module in the `modules` array of your `medusa-config.ts` file. It is not meant to be resolved in the `plugins` array. As of version 2.4.0, Medusa does not support configuring providers within plugins.
 
 ## Installation
 
@@ -56,7 +62,7 @@ export default defineConfig({
       options: {
         providers: [
           {
-            resolve: "medusa-uploadthing-file-plugin/.medusa/server/providers/file-uploadthing",
+            resolve: "medusa-uploadthing-file-plugin",
             options: {
               token: process.env.UPLOADTHING_TOKEN,
             },
@@ -87,4 +93,4 @@ There are a few additional options you can configure in the provider's options:
 
 `filePrefix` is an optional string that can be used to add a prefix to the uploaded file's name.
 
-And that's it! You're ready to start using the plugin in your Medusa application.
+And that's it! You're ready to start using the UploadThing file provider in your Medusa application.

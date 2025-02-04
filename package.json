@@ -7,6 +7,7 @@
   "files": [
     ".medusa/server"
   ],
+  "main": "./.medusa/server/providers/file-uploadthing/index.js",
   "keywords": [
     "medusa",
     "plugin",
